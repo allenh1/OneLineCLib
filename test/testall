@@ -1,0 +1,30 @@
+#!/bin/bash
+
+OLD_PATH=${PATH}
+PATH=".:${PATH}"
+finalGrade="0"
+finalTotal="0"
+
+echo "======Running Global Testall======"
+rm -f total.txt
+for d in tests/*/ ; do
+    echo Enter $d
+    cd $d
+    echo -n ${d%?}: >> ../../total.txt
+    ./testall $((RANDOM + 1024))
+    grade="$(sed '2!d' total.out)"
+    total="$(sed '3!d' total.out)"
+    finalGrade=$((grade + finalGrade)) 
+    finalTotal=$((total + finalTotal))
+    echo -n " $grade/$total" >> ../../total.txt
+    echo >> ../../total.txt
+    rm -f *.out > /dev/null
+    make clean > /dev/null
+    cd ../..
+done
+echo >> total.txt
+echo   "Tests run by $USER" on `date`  >> total.txt 
+echo "Total Grade: $finalGrade/$finalTotal" >> total.txt
+cat total.txt
+
+PATH=${OLD_PATH}

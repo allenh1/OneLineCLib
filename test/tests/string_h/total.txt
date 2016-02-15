@@ -1,0 +1,2 @@
+string_test test1                   : 10  of 10 
+string_test test2                   : 10  of 10 

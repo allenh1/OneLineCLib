@@ -1,0 +1,18 @@
+#!/bin/bash
+
+(make clean; make) || exit 1
+
+source ../../tester/testall
+
+runtest string_test test1 none 1 10
+runtest string_test test2 none 1 10
+# runtest string_test test3 none 1 10
+# runtest string_test test4 none 1 10
+# runtest string_test test5 none 1 10
+# runtest string_test test6 none 1 10
+# runtest string_test test7 none 1 10
+# runtest string_test test8 none 1 10
+# runtest string_test test9 none 1 10
+# runtest string_test test10 none 1 10
+
+printResults
