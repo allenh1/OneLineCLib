@@ -1,4 +1,4 @@
-tests/string_h: 20/20
+tests/string_h: 30/30
 
-Tests run by allenh1 on Sun Feb 14 21:31:55 EST 2016
-Total Grade: 20/20
+Tests run by allen286 on Sat Feb 27 04:44:46 EST 2016
+Total Grade: 30/30

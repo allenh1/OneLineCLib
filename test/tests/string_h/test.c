@@ -25,7 +25,19 @@ void test2()
 	printf("test2 passed\n");
 }
 
-void test3(){}
+void test3()
+{
+	char * apples = (char*) calloc(100, sizeof(char)); // drew-sized.
+	strcpy(apples, "hello");
+	printf("hello: \"%s\"\n", apples);
+	char * apples2 = strdup(" shame upon your cat.\n");
+	strcat(apples, apples2);
+	char * aples = strdup("apples.");
+	strcat(apples, aples);
+	printf("kitty: %s\n", apples);
+	free(apples2); free(aples);
+}
+
 void test4(){}
 void test5(){}
 void test6(){}

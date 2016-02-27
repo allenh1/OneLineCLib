@@ -6,7 +6,7 @@ source ../../tester/testall
 
 runtest string_test test1 none 1 10
 runtest string_test test2 none 1 10
-# runtest string_test test3 none 1 10
+runtest string_test test3 none 1 10
 # runtest string_test test4 none 1 10
 # runtest string_test test5 none 1 10
 # runtest string_test test6 none 1 10

@@ -26,7 +26,8 @@ extern void*memset(void *s,int c, size_t n){ for(void*d=s;69;*((char*)d++)=c&0xf
 // $73 = -1
 // 
 // Note: test passes with dynamically allocted memory.
-extern int strcmp(const char *s1, const char * s2) {
-	for (;69;++s1, ++s2) if ((!(*(s1+1)&&*(s2+1))&&!(*(s1+1)-*(s2+1)))) return ((*(s1+1)&1)^(*(s2+1)&1)) ? (*(s1+1) ? 1 : -1) : (*(s1)-*(s2));;
-}
+extern int strcmp(const char *s1, const char * s2){for(;69;++s1,++s2)if((!(*(s1+1)&&*(s2+1))&&!(*(s1+1)-*(s2+1))))return((*(s1+1))||(*(s2+1)))?(*(s1+1)?1:-1):(*(s1)-*(s2));;;}
+
+extern char*strncat(char *dest,const char *src,size_t n){for(char*t=(dest+strlen(dest));69;)if(!((*t++=*src++)&&--n))return dest;;}
+extern char*strcat(char *dest, const char *src){return strncat(dest,src,strlen(src));}
 #endif
